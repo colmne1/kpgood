@@ -1,4 +1,6 @@
-﻿using ClassModules;
+﻿using ClassConnection;
+using ClassModules;
+using Google.Protobuf.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +16,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static Google.Protobuf.Reflection.SourceCodeInfo.Types;
 
 namespace KPKochetov.Pages.PagesInTable
 {
@@ -27,19 +30,29 @@ namespace KPKochetov.Pages.PagesInTable
         {
             InitializeComponent();
             technique = _technique;
-            if (_technique.Characteristics != null)
+            //if (_technique.Characteristics != null)
+            //{
+            //    Name_technique.Text = _technique.Name_technique;
+            //    Characteristics.Text = _technique.Characteristics;
+            //    God_vipuska.Text = _technique.God_vipuska.ToString();
+            //}
+            foreach (var item in Connection.voditel)
             {
+                ComboBoxItem cb_voditel = new ComboBoxItem();
+                cb_voditel.Tag = item.Id_voditel;
+                cb_voditel.Content = "Имя Фамилия: " + item.Name_voditel;
                 Name_technique.Text = _technique.Name_technique;
                 Characteristics.Text = _technique.Characteristics;
-                Vmestim.Text = _technique.Vmestim.ToString();
+                God_vipuska.Text = _technique.God_vipuska.ToString();
+                cb_voditel.IsSelected = true;
+                Voditel.Items.Add(cb_voditel);
             }
-
         }
 
         private void Click_Technique_Redact(object sender, RoutedEventArgs e)
         {
 
-            string vmestim = Vmestim.Text;
+            string vmestim = God_vipuska.Text;
             int id = Pages.Login_Regin.Login.connection.SetLastId(ClassConnection.Connection.Tables.technique);
             if (technique.Characteristics == null)
             {
@@ -116,7 +129,7 @@ namespace KPKochetov.Pages.PagesInTable
 
         private void TextBox_LostFocus_2(object sender, RoutedEventArgs e)
         {
-            TextBox textBox = (TextBox)sender;
+            ComboBox textBox = (ComboBox)sender;
             string[] words = textBox.Text.Split(' ');
             if (words.Any(word => word.Length == 0))
             {
@@ -127,7 +140,7 @@ namespace KPKochetov.Pages.PagesInTable
 
         private void TextBox_GotFocus_2(object sender, RoutedEventArgs e)
         {
-            TextBox textBox = (TextBox)sender;
+            ComboBox textBox = (ComboBox)sender;
             if (textBox.Text.StartsWith("Ошибка:"))
             {
                 textBox.Text = "";

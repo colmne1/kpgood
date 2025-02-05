@@ -32,7 +32,7 @@ namespace KPKochetov.Elements
             if (_technique.Characteristics != null)
             {
                 Name_technique.Content = "Название техники: " + technique.Name_technique;
-                Vmestim.Content = "Вместимость " + technique.Vmestim;
+                god_vipuska.Content = "Год выпуска " + technique.God_vipuska;
                 Characteristics.Content = "Характеристики: " + technique.Characteristics;
             }
         }

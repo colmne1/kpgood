@@ -192,7 +192,7 @@ namespace ClassConnection
                         {
                             Id_technique = Convert.ToInt32(itemsTechnique.GetValue(0)),
                             Name_technique = Convert.ToString(itemsTechnique.GetValue(1)),
-                            Vmestim = Convert.ToInt32(itemsTechnique.GetValue(2)),
+                            God_vipuska = Convert.ToInt32(itemsTechnique.GetValue(2)),
                             Characteristics = Convert.ToString(itemsTechnique.GetValue(3))
                         };
                         technique.Add(newTechnique);
@@ -316,7 +316,7 @@ namespace ClassConnection
                     {
                         worksheet.Cells[row, 1].Value = record.Id_technique;
                         worksheet.Cells[row, 2].Value = record.Name_technique;
-                        worksheet.Cells[row, 3].Value = record.Vmestim;
+                        worksheet.Cells[row, 3].Value = record.God_vipuska;
                         worksheet.Cells[row, 4].Value = record.Characteristics;
                         row++;
                     }

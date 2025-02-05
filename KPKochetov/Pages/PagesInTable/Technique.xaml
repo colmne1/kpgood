@@ -22,10 +22,12 @@
                         <Label Content="Техника" Margin="39,28,26,0" Foreground="White" FontSize="30" FontFamily="Yu Gothic UI Semibold" HorizontalContentAlignment="Left" Height="52" VerticalAlignment="Top"/>
                         <Label Content="Название техники" Margin="39,85,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
                         <TextBox x:Name="Name_technique" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,130,193,0" VerticalAlignment="Top" LostFocus="TextBox_LostFocus_1" GotFocus="TextBox_GotFocus_1"/>
-                        <Label Content="Вместимость" Margin="39,175,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
-                        <TextBox x:Name="Vmestim" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="39,220,189,0" VerticalAlignment="Top" LostFocus="TextBox_LostFocus_1" GotFocus="TextBox_GotFocus_1"/>
+                        <Label Content="Год выпуска" Margin="39,175,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <TextBox x:Name="God_vipuska" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="39,220,189,0" VerticalAlignment="Top" LostFocus="TextBox_LostFocus_1" GotFocus="TextBox_GotFocus_1"/>
                         <Label Content="Характеристики" Margin="39,265,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
-                        <TextBox x:Name="Characteristics" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,310,193,0" VerticalAlignment="Top" LostFocus="TextBox_LostFocus_2" GotFocus="TextBox_GotFocus_2"/>
+                        <TextBox x:Name="Characteristics" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,310,193,0" VerticalAlignment="Top"/>
+                        <Label Content="Водитель" Margin="39,360,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
+                        <ComboBox x:Name="Voditel" Height="35" Background="#FFDEDEDE" Margin="39,395,194,0" VerticalAlignment="Top" GotFocus="TextBox_GotFocus_2"/>
                         <Button Style="{StaticResource BtnRedac}" Margin="0,0,136.2,24" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_Technique_Redact" HorizontalAlignment="Right">
                             <Image Source="/Images/redac.png" Width="20" Height="20"/>
                         </Button>

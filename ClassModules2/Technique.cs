@@ -10,7 +10,7 @@ namespace ClassModules
     {
         public int Id_technique { get; set; }
         public string Name_technique { get; set; }
-        public int Vmestim { get; set; }
+        public int God_vipuska { get; set; }
         public string Characteristics { get; set; }
         //public int Id_technique { get; set; }
         //public string Name_technique { get; set; }
