@@ -14,8 +14,8 @@
             <Label x:Name="Locations" Content="Дислокация" Margin="19,36,101,0" Foreground="White" FontFamily="Corbel" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top" HorizontalAlignment="Left"/>
             <Label x:Name="Vmestim" Content="Вместимость" Margin="19,61,101,0" Foreground="White" FontFamily="Corbel" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top" HorizontalAlignment="Left"/>
             <Label x:Name="Date_of_foundation" Content="Дата основания" Margin="19,86,101,0" Foreground="White" FontFamily="Corbel" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            <Label x:Name="remuslug" Content="Ремонтные услуги" Margin="130,61,101,0" Foreground="White" FontFamily="Corbel" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-
+            <Label x:Name="remuslug" Content="Ремонтные услуги" Margin="200,61,101,0" Foreground="White" FontFamily="Corbel" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <Label x:Name="vidTS" Content="Вид транспорта" Margin="200,36,121,0" Foreground="White" FontFamily="Corbel" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top" HorizontalAlignment="Left"/>
             <Grid x:Name="Buttons">
                 <Button Style="{StaticResource BtnRedac}" Background="#FF2C2C2C" Margin="0,15,9.6,0" VerticalAlignment="Top" Height="40" Width="63" Click="Click_redact" HorizontalAlignment="Right">
                     <Image Source="/Images/redac.png" Width="20" Height="20"/>

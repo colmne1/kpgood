@@ -24,6 +24,7 @@ namespace KPKochetov.Elements
     public partial class Technique_items : UserControl
     {
         ClassModules.Technique technique;
+        
         public Technique_items(ClassModules.Technique _technique)
         {
             InitializeComponent();
@@ -34,6 +35,7 @@ namespace KPKochetov.Elements
                 Name_technique.Content = "Название техники: " + technique.Name_technique;
                 god_vipuska.Content = "Год выпуска " + technique.God_vipuska;
                 Characteristics.Content = "Характеристики: " + technique.Characteristics;
+                voditel.Content = "Имя фамилия водителя: " + Connection.voditel.FirstOrDefault(x => x.Id_voditel == _technique.voditel).Name_voditel;
             }
         }
 

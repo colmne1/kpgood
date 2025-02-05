@@ -45,7 +45,6 @@ namespace KPKochetov.Pages.PagesInTable
 
         private void Click_TypeOfTroops_Redact(object sender, RoutedEventArgs e)
         {
-            ClassModules.Voditel Id_voditel_temp;
             int id = Pages.Login_Regin.Login.connection.SetLastId(ClassConnection.Connection.Tables.zapchast);
             if (type_of_troops.Name_zapchast == null)
             {

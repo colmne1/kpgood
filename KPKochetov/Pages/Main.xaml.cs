@@ -95,11 +95,11 @@ namespace KPKochetov.Pages
         private void Click_Garage(object sender, RoutedEventArgs e)
         {
             Search.IsEnabled = true;
-            parts_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFF"));
+            garage.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFF"));
             ceh_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             Voditel_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             technique_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
-            typeOfTroops_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
+            zapchast_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
 
             if (frame_main.Visibility == Visibility.Visible) MainWindow.main.Animation_move(MainWindow.main.frame_main, MainWindow.main.scroll_main);
             if (page_select != page_main.Garage)
@@ -152,11 +152,11 @@ namespace KPKochetov.Pages
         private void Click_Ceh(object sender, RoutedEventArgs e)
         {
             Search.IsEnabled = true;
-            parts_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
+            garage.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             ceh_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFF"));
             Voditel_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             technique_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
-            typeOfTroops_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
+            zapchast_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             if (frame_main.Visibility == Visibility.Visible) MainWindow.main.Animation_move(MainWindow.main.frame_main, MainWindow.main.scroll_main);
             if (page_select != page_main.ceh)
             {
@@ -208,11 +208,11 @@ namespace KPKochetov.Pages
         private void Click_Voditel(object sender, RoutedEventArgs e)
         {
             Search.IsEnabled = true;
-            parts_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
+            garage.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             ceh_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             Voditel_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFF"));
             technique_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
-            typeOfTroops_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
+            zapchast_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
 
             if (frame_main.Visibility == Visibility.Visible) MainWindow.main.Animation_move(MainWindow.main.frame_main, MainWindow.main.scroll_main);
             if (page_select != page_main.Voditel)
@@ -265,11 +265,11 @@ namespace KPKochetov.Pages
         private void Click_Technique(object sender, RoutedEventArgs e)
         {
             Search.IsEnabled = true;
-            parts_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
+            garage.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             ceh_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             Voditel_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             technique_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFF"));
-            typeOfTroops_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
+            zapchast_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
 
             if (frame_main.Visibility == Visibility.Visible) MainWindow.main.Animation_move(MainWindow.main.frame_main, MainWindow.main.scroll_main);
             if (page_select != page_main.technique)
@@ -296,7 +296,7 @@ namespace KPKochetov.Pages
             }
         }
 
-        private void LoadTypeOfTroops()
+        private void LoadZapchast()
         {
             Dispatcher.InvokeAsync(async () =>
             {
@@ -319,14 +319,14 @@ namespace KPKochetov.Pages
             });
         }
 
-        private void Click_Type_of_troops(object sender, RoutedEventArgs e)
+        private void Click_Zapchast(object sender, RoutedEventArgs e)
         {
             Search.IsEnabled = true;
-            parts_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
+            garage.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             ceh_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             Voditel_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             technique_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
-            typeOfTroops_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFF"));
+            zapchast_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFF"));
             if (frame_main.Visibility == Visibility.Visible) MainWindow.main.Animation_move(MainWindow.main.frame_main, MainWindow.main.scroll_main);
             if (page_select != page_main.zapchast)
             {
@@ -344,7 +344,7 @@ namespace KPKochetov.Pages
                     opgriAnimation.Duration = TimeSpan.FromSeconds(0.2);
                     opgriAnimation.Completed += delegate
                     {
-                        LoadTypeOfTroops();
+                        LoadZapchast();
                     };
                     parrent.BeginAnimation(StackPanel.OpacityProperty, opgriAnimation);
                 };
@@ -359,12 +359,11 @@ namespace KPKochetov.Pages
         private void Click_Export(object sender, MouseButtonEventArgs e)
         {
             Search.IsEnabled = false;
-            parts_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
+            garage.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             ceh_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             Voditel_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             technique_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
-            typeOfTroops_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
-
+            zapchast_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             parrent.Children.Clear();
             page_select = page_main.none;
             var export = new ExportWindow();
@@ -445,7 +444,7 @@ namespace KPKochetov.Pages
                     else if (page_select == page_main.zapchast)
                     {
                         if (parrent != null) parrent.Children.Clear();
-                        LoadTypeOfTroops();
+                        LoadZapchast();
                     }
 
                     isDataLoaded = true;
@@ -460,11 +459,11 @@ namespace KPKochetov.Pages
         private void Click_Back(object sender, RoutedEventArgs e)
         {
             Search.IsEnabled = false;
-            parts_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
+            garage.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             ceh_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             Voditel_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             technique_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
-            typeOfTroops_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
+            zapchast_itms.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF2C2C2C"));
             parrent.Children.Clear();
             page_select = page_main.none;
             Login.UserInfo[0] = ""; Login.UserInfo[1] = "";
@@ -498,7 +497,7 @@ namespace KPKochetov.Pages
                 else if (page_restart == page_main.zapchast)
                 {
                     page_select = page_main.none;
-                    Click_Type_of_troops(new object(), new RoutedEventArgs());
+                    Click_Zapchast(new object(), new RoutedEventArgs());
                 }
 
             }

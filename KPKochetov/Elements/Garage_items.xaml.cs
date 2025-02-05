@@ -38,6 +38,7 @@ namespace KPKochetov.Elements
                 Vmestim.Content = "Вместимость: " + _garage.Vmestim;
                 Date_of_foundation.Content = "Дата основания: " + _garage.Date_of_foundation.ToString("dd.MM.yyyy");
                 remuslug.Content = "Ремонтные услуgи: " + _garage.Remrabot;
+                vidTS.Content = "Вид транспорта: " + Connection.technique.FirstOrDefault(x => x.Id_technique == _garage.VidTS).Name_technique;
             }
         }
 

@@ -27,7 +27,7 @@
         </Grid>
         <Grid Margin="10,71,10,0" Height="51" VerticalAlignment="Top">
             <StackPanel x:Name="list_move" Orientation="Horizontal">
-                <Border x:Name="parts_itms" Margin="5,3,10,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_Garage" Padding="7,7,7,7" Cursor="Hand">
+                <Border x:Name="garage" Margin="5,3,10,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_Garage" Padding="7,7,7,7" Cursor="Hand">
                     <Grid Height="30">
                         <Image Source="/Images/garage.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
                         <Label Content="Гаражи" Margin="44,0,0,0" Foreground="#3DAEFF" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" FontWeight="Bold"/>
@@ -51,7 +51,7 @@
                         <Label Content="Техника" Margin="44,0,0,0" Foreground="#3DAEFF" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30"  VerticalAlignment="Top" FontWeight="Bold"/>
                     </Grid>
                 </Border>
-                <Border x:Name="typeOfTroops_itms" Margin="15,3,0,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_Type_of_troops" Padding="7,7,7,7" Cursor="Hand">
+                <Border x:Name="zapchast_itms" Margin="15,3,0,0" Height="45" CornerRadius="5,5,5,5" Style="{StaticResource Grid_Itm_Anim}" MouseDown="Click_Zapchast" Padding="7,7,7,7" Cursor="Hand">
                     <Grid Height="30">
                         <Image Source="/Images/wrench.png" Margin="5,0,0,0" HorizontalAlignment="Left" Width="29" Height="30" VerticalAlignment="Top"/>
                         <Label Content="Запчасти" Margin="44,0,0,0" Foreground="#3DAEFF" FontSize="15" FontFamily="Corbel" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Height="30"  VerticalAlignment="Top" FontWeight="Bold"/>

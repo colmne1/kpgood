@@ -193,7 +193,8 @@ namespace ClassConnection
                             Id_technique = Convert.ToInt32(itemsTechnique.GetValue(0)),
                             Name_technique = Convert.ToString(itemsTechnique.GetValue(1)),
                             God_vipuska = Convert.ToInt32(itemsTechnique.GetValue(2)),
-                            Characteristics = Convert.ToString(itemsTechnique.GetValue(3))
+                            Characteristics = Convert.ToString(itemsTechnique.GetValue(3)),
+                            voditel = Convert.ToInt32(itemsTechnique.GetValue(4))
                         };
                         technique.Add(newTechnique);
                     }
@@ -309,8 +310,9 @@ namespace ClassConnection
                     ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("Записи (техника)");
                     worksheet.Cells[1, 1].Value = "Код техники";
                     worksheet.Cells[1, 2].Value = "Название техники";
-                    worksheet.Cells[1, 3].Value = "Вместимость";
+                    worksheet.Cells[1, 3].Value = "Год выпуска";
                     worksheet.Cells[1, 4].Value = "Характеристики";
+                    worksheet.Cells[1, 5].Value = "Водитель";
                     int row = 2;
                     foreach (var record in technique)
                     {
@@ -318,6 +320,7 @@ namespace ClassConnection
                         worksheet.Cells[row, 2].Value = record.Name_technique;
                         worksheet.Cells[row, 3].Value = record.God_vipuska;
                         worksheet.Cells[row, 4].Value = record.Characteristics;
+                        worksheet.Cells[row, 5].Value = record.voditel;
                         row++;
                     }
                 }
