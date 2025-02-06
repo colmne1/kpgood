@@ -24,13 +24,13 @@
                         <TextBox x:Name="Name_zapchast" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,130,193,0" VerticalAlignment="Top" PreviewTextInput="TextBox_PreviewTextInput_1" LostFocus="TextBox_LostFocus_1" GotFocus="TextBox_GotFocus_1"/>
                         <Label Content="Описание" Margin="39,175,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
                         <TextBox x:Name="Description" Style="{StaticResource BaseBox}" Height="35" Background="#FFDEDEDE" Margin="40,220,193,0" VerticalAlignment="Top" LostFocus="TextBox_LostFocus_2" GotFocus="TextBox_GotFocus_2"/>
-                        <Button Style="{StaticResource BtnRedac}" Margin="0,0,136.2,24" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_TypeOfTroops_Redact" HorizontalAlignment="Right">
+                        <Button Style="{StaticResource BtnRedac}" Margin="0,0,136.2,24" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_Zapchast_Redact" HorizontalAlignment="Right">
                             <Image Source="/Images/redac.png" Width="20" Height="20"/>
                         </Button>
-                        <Button x:Name="btn_cancel"  Style="{StaticResource BtnRedac}" Background="#FFE48F2B" Margin="0,0,26.2,24" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_Cancel_TypeOfTroops_Redact" HorizontalAlignment="Right">
+                        <Button x:Name="btn_cancel"  Style="{StaticResource BtnRedac}" Background="#FFE48F2B" Margin="0,0,26.2,24" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_Cancel_Zapchast_Redact" HorizontalAlignment="Right">
                             <Image Source="/Images/backs.png" Width="20" Height="20"/>
                         </Button>
-                        <Button x:Name="btn_remove" Style="{StaticResource BtnRedac}" Background="#FFE42B2B" Margin="30,0,0,23.6" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_Remove_TypeOfTroops_Redact" HorizontalAlignment="Left">
+                        <Button x:Name="btn_remove" Style="{StaticResource BtnRedac}" Background="#FFE42B2B" Margin="30,0,0,23.6" VerticalAlignment="Bottom" Height="40" Width="105" Click="Click_Remove_Zapchast_Redact" HorizontalAlignment="Left">
                             <Image Source="/Images/del.png" Width="20" Height="20"/>
                         </Button>
                     </Grid>

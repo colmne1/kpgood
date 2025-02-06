@@ -24,15 +24,16 @@ namespace KPKochetov.Pages.PagesInTable
     /// </summary>
     public partial class Zapchast : Page
     {
-        ClassModules.Zapchast type_of_troops;
-        public Zapchast(ClassModules.Zapchast _type_of_troops)
+        ClassModules.Zapchast zapchast;
+        public Zapchast(ClassModules.Zapchast _zapchast)
         {
+
             InitializeComponent();
-            type_of_troops = _type_of_troops;
-            if (_type_of_troops.Name_zapchast != null)
+            zapchast = _zapchast;
+            if (_zapchast.Name_zapchast != null)
             {
-                Name_zapchast.Text = _type_of_troops.Name_zapchast;
-                Description.Text = _type_of_troops.Description;
+                Name_zapchast.Text = _zapchast.Name_zapchast;
+                Description.Text = _zapchast.Description;
             }
             foreach (var item in ClassConnection.Connection.voditel)
             {
@@ -43,10 +44,10 @@ namespace KPKochetov.Pages.PagesInTable
             }
         }
 
-        private void Click_TypeOfTroops_Redact(object sender, RoutedEventArgs e)
+        private void Click_Zapchast_Redact(object sender, RoutedEventArgs e)
         {
             int id = Pages.Login_Regin.Login.connection.SetLastId(ClassConnection.Connection.Tables.zapchast);
-            if (type_of_troops.Name_zapchast == null)
+            if (zapchast.Name_zapchast == null)
             {
                 string query = $"Insert Into zapchast ([Id_zapchast], [Name_zapchast], [Description], [Date_foundation]) Values ({id.ToString()}, N'{Name_zapchast.Text}', N'{Description.Text}', '{DateTime.Now.ToString("yyyy-MM-dd")}')";
                 var query_apply = Pages.Login_Regin.Login.connection.Query(query);
@@ -59,7 +60,7 @@ namespace KPKochetov.Pages.PagesInTable
             }
             else
             {
-                string query = $"Update zapchast Set Name_zapchast = N'{Name_zapchast.Text}', Description = N'{Description.Text}' Where Id_zapchast = {type_of_troops.Id_zapchast}";
+                string query = $"Update zapchast Set Name_zapchast = N'{Name_zapchast.Text}', Description = N'{Description.Text}' Where Id_zapchast = {zapchast.Id_zapchast}";
                 var query_apply = Pages.Login_Regin.Login.connection.Query(query);
                 if (query_apply != null)
                 {
@@ -70,14 +71,14 @@ namespace KPKochetov.Pages.PagesInTable
             }
         }
 
-        private void Click_Cancel_TypeOfTroops_Redact(object sender, RoutedEventArgs e) => MainWindow.main.Animation_move(MainWindow.main.frame_main, MainWindow.main.scroll_main);
+        private void Click_Cancel_Zapchast_Redact(object sender, RoutedEventArgs e) => MainWindow.main.Animation_move(MainWindow.main.frame_main, MainWindow.main.scroll_main);
 
-        private void Click_Remove_TypeOfTroops_Redact(object sender, RoutedEventArgs e)
+        private void Click_Remove_Zapchast_Redact(object sender, RoutedEventArgs e)
         {
             try
             {
                 Pages.Login_Regin.Login.connection.LoadData(ClassConnection.Connection.Tables.zapchast);
-                string query = "Delete From zapchast Where [Id_zapchast] = " + type_of_troops.Id_zapchast.ToString() + "";
+                string query = "Delete From zapchast Where [Id_zapchast] = " + zapchast.Id_zapchast.ToString() + "";
                 var query_apply = Pages.Login_Regin.Login.connection.Query(query);
                 if (query_apply != null)
                 {

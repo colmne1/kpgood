@@ -53,7 +53,7 @@ namespace KPKochetov.Pages.PagesInTable
             }
             else
             {
-                string query = $"Update ceh Set [oborud] = N'{oborud.Text}', [Address] = N'{Address.Text}', [remuslug] = N'{remuslug.Text}' Where [Id_сeh] = {ceh.Id_сeh}";
+                string query = $"Update сeh Set [oborud] = N'{oborud.Text}', [Address] = N'{Address.Text}', [remuslug] = N'{remuslug.Text}' Where [Id_сeh] = {ceh.Id_сeh}";
                 var query_apply = Login_Regin.Login.connection.Query(query);
                 if (query_apply != null)
                 {

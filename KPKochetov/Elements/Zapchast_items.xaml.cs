@@ -22,16 +22,16 @@ namespace KPKochetov.Elements
     public partial class Zapchast_items : UserControl
     {
         ClassModules.Zapchast zapchast;
-        public Zapchast_items(ClassModules.Zapchast _type_of_troops)
+        public Zapchast_items(ClassModules.Zapchast _zapchast)
         {
             InitializeComponent();
             if (Pages.Login_Regin.Login.UserInfo[1] != "admin") Buttons.Visibility = Visibility.Hidden;
-            zapchast = _type_of_troops;
-            if (_type_of_troops.Name_zapchast != null)
+            zapchast = _zapchast;
+            if (_zapchast.Name_zapchast != null)
             {
-                Name_zapchast.Content = "Название запчасти: " + _type_of_troops.Name_zapchast;
-                Description.Content = "Описание: " + _type_of_troops.Description;
-                Date_foundation.Content = "Дата создания: " + _type_of_troops.Date_foundation.ToString("dd.MM.yyyy");
+                Name_zapchast.Content = "Название запчасти: " + _zapchast.Name_zapchast;
+                Description.Content = "Описание: " + _zapchast.Description;
+                Date_foundation.Content = "Дата создания: " + _zapchast.Date_foundation.ToString("dd.MM.yyyy");
             }
         }
 

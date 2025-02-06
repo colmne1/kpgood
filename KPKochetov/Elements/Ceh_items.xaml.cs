@@ -30,7 +30,6 @@ namespace KPKochetov.Elements
             InitializeComponent();
             if (Pages.Login_Regin.Login.UserInfo[1] != "admin") Buttons.Visibility = Visibility.Hidden;
             Ceh = _Ceh;
-#pragma warning disable
             if (_Ceh.remuslug != null)
             {
                 ceh_name.Content = "Цех №" + _Ceh.Id_сeh.ToString();

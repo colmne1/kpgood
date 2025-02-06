@@ -14,18 +14,14 @@ namespace ClassConnection
     public class Connection
     {
         public static bool ConnectIsTrue = false;
-        #region Connection
         public static string Path_connection;
-        #endregion
 
-        #region All_Lists
         public static List<Voditel> voditel = new List<Voditel>();
         public static List<Ceh> ceh = new List<Ceh>();
         public static List<Garage> garage = new List<Garage>();
         public static List<Technique> technique = new List<Technique>();
         public static List<Zapchast> zapchast = new List<Zapchast>();
         public static List<Users> users = new List<Users>();
-        #endregion
         public enum Tables
         {
             voditel, сeh, Garage, technique, zapchast, users
@@ -36,7 +32,6 @@ namespace ClassConnection
             try
             {
                 string Path = $@"Server=DESKTOP-JPS19OC\SQLEXPRESS;Database=kpkochetov1;Trusted_Connection=True;User Id=sa;Password=root";
-                //string Path = $@"Server=student.permaviat.ru;Database=base1_ISP_21_2_23;User Id=ISP_21_2_23;Password=3frQxZ83o#";
                 SqlConnection connection = new SqlConnection(Path);
                 connection.Open();
                 ConnectIsTrue = true;
@@ -73,7 +68,7 @@ namespace ClassConnection
                 LoadData(tables);
                 switch (tables.ToString())
                 {
-                    case "Voditel":
+                    case "voditel":
                         if (voditel.Count >= 1)
                         {
                             int max_status = voditel[0].Id_voditel;
@@ -148,39 +143,39 @@ namespace ClassConnection
 
                 if (tables.ToString() == "сeh")
                 {
-                    SqlDataReader itemsLocations = Query("Select * From " + tables.ToString() + " Order By [Id_сeh]");
+                    SqlDataReader itemsCeh = Query("Select * From " + tables.ToString() + " Order By [Id_сeh]");
                     ceh.Clear();
-                    while (itemsLocations.Read())
+                    while (itemsCeh.Read())
                     {
-                        Ceh newLocations = new Ceh
+                        Ceh newCeh = new Ceh
                         {
-                            Id_сeh = Convert.ToInt32(itemsLocations.GetValue(0)),
-                            oborud = Convert.ToString(itemsLocations.GetValue(1)),
-                            Address = Convert.ToString(itemsLocations.GetValue(2)),
-                            remuslug = Convert.ToString(itemsLocations.GetValue(3))
+                            Id_сeh = Convert.ToInt32(itemsCeh.GetValue(0)),
+                            oborud = Convert.ToString(itemsCeh.GetValue(1)),
+                            Address = Convert.ToString(itemsCeh.GetValue(2)),
+                            remuslug = Convert.ToString(itemsCeh.GetValue(3))
                         };
-                        ceh.Add(newLocations);
+                        ceh.Add(newCeh);
                     }
-                    itemsLocations.Close();
+                    itemsCeh.Close();
                 }
                 if (tables.ToString() == "Garage")
                 {
-                    SqlDataReader itemsParts = Query("Select * From " + tables.ToString() + " Order By [Id_garage]");
+                    SqlDataReader itemsGarage = Query("Select * From " + tables.ToString() + " Order By [Id_garage]");
                     garage.Clear();
-                    while (itemsParts.Read())
+                    while (itemsGarage.Read())
                     {
-                        Garage newParts = new Garage
+                        Garage newGarage = new Garage
                         {
-                            Id_garage = Convert.ToInt32(itemsParts.GetValue(0)),
-                            Locations = Convert.ToString(itemsParts.GetValue(1)),
-                            Vmestim = Convert.ToInt32(itemsParts.GetValue(2)),
-                            VidTS = Convert.ToInt32((int)itemsParts.GetValue(3)),
-                            Remrabot = Convert.ToString(itemsParts.GetValue(4)),
-                            Date_of_foundation = Convert.ToDateTime(itemsParts.GetValue(5))
+                            Id_garage = Convert.ToInt32(itemsGarage.GetValue(0)),
+                            Locations = Convert.ToString(itemsGarage.GetValue(1)),
+                            Vmestim = Convert.ToInt32(itemsGarage.GetValue(2)),
+                            VidTS = Convert.ToInt32((int)itemsGarage.GetValue(3)),
+                            Remrabot = Convert.ToString(itemsGarage.GetValue(4)),
+                            Date_of_foundation = Convert.ToDateTime(itemsGarage.GetValue(5))
                         };
-                        garage.Add(newParts);
+                        garage.Add(newGarage);
                     }
-                    itemsParts.Close();
+                    itemsGarage.Close();
                 }
                 if (tables.ToString() == "technique")
                 {
@@ -202,20 +197,20 @@ namespace ClassConnection
                 }
                 if (tables.ToString() == "zapchast")
                 {
-                    SqlDataReader itemsType_of_troops = Query("Select * From " + tables.ToString() + " Order By [Id_zapchast]");
+                    SqlDataReader itemsZapchast = Query("Select * From " + tables.ToString() + " Order By [Id_zapchast]");
                     zapchast.Clear();
-                    while (itemsType_of_troops.Read())
+                    while (itemsZapchast.Read())
                     {
-                        Zapchast newType_of_troops = new Zapchast
+                        Zapchast newZapchast = new Zapchast
                         {
-                            Id_zapchast = Convert.ToInt32(itemsType_of_troops.GetValue(0)),
-                            Name_zapchast = Convert.ToString(itemsType_of_troops.GetValue(1)),
-                            Description = Convert.ToString(itemsType_of_troops.GetValue(2)),
-                            Date_foundation = Convert.ToDateTime(itemsType_of_troops.GetValue(3))
+                            Id_zapchast = Convert.ToInt32(itemsZapchast.GetValue(0)),
+                            Name_zapchast = Convert.ToString(itemsZapchast.GetValue(1)),
+                            Description = Convert.ToString(itemsZapchast.GetValue(2)),
+                            Date_foundation = Convert.ToDateTime(itemsZapchast.GetValue(3))
                         };
-                        zapchast.Add(newType_of_troops);
+                        zapchast.Add(newZapchast);
                     }
-                    itemsType_of_troops.Close();
+                    itemsZapchast.Close();
                 }
 
                 if (tables.ToString() == "users")

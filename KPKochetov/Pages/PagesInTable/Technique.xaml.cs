@@ -30,12 +30,6 @@ namespace KPKochetov.Pages.PagesInTable
         {
             InitializeComponent();
             technique = _technique;
-            //if (_technique.Characteristics != null)
-            //{
-            //    Name_technique.Text = _technique.Name_technique;
-            //    Characteristics.Text = _technique.Characteristics;
-            //    God_vipuska.Text = _technique.God_vipuska.ToString();
-            //}
             foreach (var item in Connection.voditel)
             {
                 ComboBoxItem cb_voditel = new ComboBoxItem();

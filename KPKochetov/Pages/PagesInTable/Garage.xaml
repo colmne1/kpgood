@@ -23,7 +23,7 @@
                         <Label Content="Дислокация" Margin="39,85,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
                         <TextBox x:Name="Locations" Style="{StaticResource BaseBox}" FontFamily="Yu Gothic UI Semilight" Margin="39,130,189,0" HorizontalContentAlignment="Left" VerticalAlignment="Top" Height="30" FontSize="14"/>
                         <Label Content="Вместимость" Margin="39,165,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
-                        <TextBox x:Name="Vmestim" Style="{StaticResource BaseBox}" FontFamily="Yu Gothic UI Semilight" Margin="39,210,189,0" HorizontalContentAlignment="Left" VerticalAlignment="Top" Height="30" FontSize="14"/>
+                        <TextBox x:Name="Vmestim" Style="{StaticResource BaseBox}" PreviewTextInput="TextBox_PreviewTextInput_2" FontFamily="Yu Gothic UI Semilight" Margin="39,210,189,0" HorizontalContentAlignment="Left" VerticalAlignment="Top" Height="30" FontSize="14"/>
                         <Label Content="Вид транспорта" Margin="39,262,26,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
                         <ComboBox x:Name="VidTS"  Height="36" Background="#FFDEDEDE" Margin="40,300,193,0" VerticalAlignment="Top" />
                         <Label Content="Ремонтные работы" Margin="40,341,25,0" Foreground="White" FontSize="15" FontFamily="Yu Gothic UI Semilight" HorizontalContentAlignment="Left" Height="29" VerticalAlignment="Top"/>
